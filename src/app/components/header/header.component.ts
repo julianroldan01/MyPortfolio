@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-
 @Component({
   selector: 'app-header',
   standalone: true,
@@ -14,7 +13,12 @@ export class HeaderComponent {
   logoUrl: string = 'https://avatars.githubusercontent.com/u/53824865?s=400&u=130af25beed23adb11289d42c4b9927bfadead97&v=4';
   menuOpen = false;
 
-  toggleMobileMenu() {
-    this.menuOpen = !this.menuOpen;
+  toggleSidebar() {
+      this.menuOpen = !this.menuOpen;
   }
+  
+  closeMenu() {
+      this.menuOpen = false;
+  }
+  
 }

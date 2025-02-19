@@ -1,39 +1,17 @@
-<!-- ✅ Botón menú hamburguesa (solo en móviles) -->
-<button class="menu-toggle d-md-none" (click)="toggleMobileMenu()">☰</button>
+<button class="menu-toggle" (click)="toggleSidebar()">☰</button>
 
-<!-- ✅ Menú lateral en PC -->
-<header class="sidebar-header d-none d-md-flex flex-column">
+<header class="sidebar-header" [class.open]="menuOpen">
     <div class="logo">
-        <img [src]="logoUrl" alt="Logo">
+        <img [src]="logoUrl" alt="Logo" />
         <h1>{{ fullName }}</h1>
     </div>
 
     <nav class="sidebar-nav">
         <ul>
-            <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Inicio</a></li>
-            <li><a routerLink="/about" routerLinkActive="active">Sobre mí</a></li>
-            <li><a routerLink="/projects" routerLinkActive="active">Proyectos</a></li>
-            <li><a routerLink="/contact" routerLinkActive="active">Contacto</a></li>
+            <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">Inicio</a></li>
+            <li><a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">Sobre mí</a></li>
+            <li><a routerLink="/projects" routerLinkActive="active" (click)="closeMenu()">Proyectos</a></li>
+            <li><a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contacto</a></li>
         </ul>
     </nav>
 </header>
-
-<!-- ✅ Menú móvil con animación mejorada -->
-<div class="mobile-menu" [class.open]="menuOpen">
-    <!-- Botón cerrar -->
-    <button class="menu-close" (click)="toggleMobileMenu()">✖</button>
-
-    <div class="logo">
-        <img [src]="logoUrl" alt="Logo">
-        <h1>{{ fullName }}</h1>
-    </div>
-
-    <nav class="sidebar-nav">
-        <ul>
-            <li><a routerLink="/" routerLinkActive="active" (click)="toggleMobileMenu()">Inicio</a></li>
-            <li><a routerLink="/about" routerLinkActive="active" (click)="toggleMobileMenu()">Sobre mí</a></li>
-            <li><a routerLink="/projects" routerLinkActive="active" (click)="toggleMobileMenu()">Proyectos</a></li>
-            <li><a routerLink="/contact" routerLinkActive="active" (click)="toggleMobileMenu()">Contacto</a></li>
-        </ul>
-    </nav>
-</div>
