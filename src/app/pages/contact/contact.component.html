@@ -1,0 +1,20 @@
+<section class="contact">
+  <div class="contact-content">
+    <h1>Contáctame</h1>
+    <p>¿Tienes algún proyecto en mente? ¡Hablemos!</p>
+
+    <!-- Agregamos #form para capturar la referencia en el componente -->
+    <form #form (submit)="sendMessage(form)">
+      <input type="text" name="name" placeholder="Tu Nombre" required />
+      <input type="email" name="email" placeholder="Tu Correo Electrónico" required />
+      <input type="phone" name="phone" placeholder="Tu número de Celular" required />
+      <textarea name="message" placeholder="Tu Mensaje" rows="5" required></textarea>
+      <button type="submit" class="btn" id="button">Enviar Mensaje</button>
+    </form>
+
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/julian-andres-roldan-dussan-55708b264/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/julianroldan01" target="_blank">GitHub</a>
+    </div>
+  </div>
+</section>

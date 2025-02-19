@@ -1,0 +1,194 @@
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+    margin-left: 250px; /* Ajuste para que no se superponga con el sidebar */
+    text-align: center;
+    background: linear-gradient(135deg, #2b2b2bd6, #1e1e1eee);
+    color: white;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.home-content h2 {
+    font-size: 1.8rem;
+    color: #f4a261;
+    margin-bottom: 20px;
+}
+
+.home-content p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+/* Botones */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 20px;
+    font-size: 1rem;
+    text-decoration: none;
+    color: white;
+    background-color: #f4a261;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #e76f51;
+}
+
+.btn-secondary {
+    background-color: #264653;
+}
+
+.btn-secondary:hover {
+    background-color: #2a9d8f;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .home {
+        margin-left: 80px;
+    }
+
+    .home-content h1 {
+        font-size: 2rem;
+    }
+
+    .home-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .home-content p {
+        font-size: 1rem;
+    }
+}
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #2b2b2bd6, #1e1e1eee);
+    color: white;
+}
+
+.home-content {
+    max-width: 700px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+h1 .highlight {
+    color: #f4a261;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #f4a261;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+/* Estilos para tecnologías y lenguajes */
+.tech-icons, .language-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.tech-item, .lang-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.tech-item i, .lang-item i {
+    font-size: 1.8rem;
+    color: #f4a261;
+}
+
+.tech-item:hover, .lang-item:hover {
+    transform: scale(1.1);
+}
+
+/* Botones */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 12px 20px;
+    font-size: 1rem;
+    text-decoration: none;
+    color: white;
+    background-color: #f4a261;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #e76f51;
+}
+
+.btn-secondary {
+    background-color: #264653;
+}
+
+.btn-secondary:hover {
+    background-color: #2a9d8f;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.slide-in {
+    animation: fadeInUp 1.2s ease-in-out;
+}

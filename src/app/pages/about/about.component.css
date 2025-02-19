@@ -1,0 +1,258 @@
+/* Diseño general de la sección */
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Cambiado de height a min-height para evitar cortes en móviles */
+    padding: 20px;
+    margin-left: 250px; /* Ajuste para que no se superponga con el sidebar */
+    text-align: center;
+    background: linear-gradient(135deg, #2b2b2bd6, #1e1e1eee);
+    color: white;
+    flex-direction: column; /* Asegura que todo esté bien alineado en pantallas pequeñas */
+}
+
+/* Contenedor del contenido */
+.about-content {
+    max-width: 800px;
+    width: 90%;
+    padding: 20px;
+}
+
+/* Títulos */
+.about-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #f4a261;
+}
+
+.about-content h2 {
+    font-size: 1.8rem;
+    color: #f4a261;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+/* Estilos de la línea de tiempo */
+.timeline {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 40px;
+    padding: 20px;
+   
+    border-radius: 10px;
+}
+
+/* Título de la línea de tiempo */
+.timeline h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #f4a261;
+}
+
+/* Contenedor de la línea de tiempo */
+.timeline-container {
+    position: relative;
+    padding: 0 15px;
+    margin-top: 40px;
+}
+
+/* ✅ Línea de tiempo responsiva */
+.timeline-track {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* Espaciado uniforme */
+}
+
+/* Cada elemento de la línea de tiempo */
+.timeline-item {
+    position: relative;
+    text-align: center;
+    width: 180px;
+}
+
+/* Puntos de la línea de tiempo */
+.timeline-dot {
+    width: 18px;
+    height: 18px;
+    background-color: #e76f51;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(231, 111, 81, 0.5);
+}
+
+.timeline-item:hover .timeline-dot {
+    transform: translateX(-50%) scale(1.3);
+}
+
+/* Contenido de cada ítem */
+.timeline-content {
+    margin-top: 35px;
+}
+
+.year {
+    font-size: 1.1rem;
+    color: #e76f51;
+    font-weight: 600;
+}
+
+.timeline-item h4 {
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+.timeline-item p {
+    font-size: 1rem;
+    color: #dcdcdc;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+/* Línea de conexión entre los puntos */
+.timeline-container::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #e76f51;
+    z-index: -1;
+}
+
+/* Botones */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 20px;
+    font-size: 1rem;
+    text-decoration: none;
+    color: white;
+    background-color: #f4a261;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #e76f51;
+}
+
+.btn-secondary {
+    background-color: #264653;
+}
+
+.btn-secondary:hover {
+    background-color: #2a9d8f;
+}
+
+/* 🎯 RESPONSIVE DESIGN */
+
+/* ✅ Ajuste en tablets y pantallas medianas */
+@media (max-width: 1024px) {
+    .about {
+        margin-left: 80px; /* Sidebar más pequeño */
+        padding: 40px 20px;
+    }
+
+    .about-content {
+        max-width: 90%;
+    }
+
+    .timeline {
+        max-width: 90%;
+    }
+}
+
+/* ✅ Ajuste en móviles */
+@media (max-width: 768px) {
+    .about {
+        margin-left: 0; /* Elimina margen del sidebar */
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .about-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .about-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+    }
+
+    .timeline {
+        padding: 15px;
+    }
+
+    .timeline-track {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timeline-item {
+        max-width: 250px;
+    }
+
+    .timeline-dot {
+        width: 14px;
+        height: 14px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+/* ✅ Ajuste en pantallas pequeñas */
+@media (max-width: 480px) {
+    .about {
+        padding: 30px 15px;
+    }
+
+    .about-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .about-content h2 {
+        font-size: 1.3rem;
+    }
+
+    .about-content p {
+        font-size: 0.9rem;
+    }
+
+    .timeline-item {
+        max-width: 200px;
+    }
+
+    .timeline-dot {
+        width: 12px;
+        height: 12px;
+    }
+}

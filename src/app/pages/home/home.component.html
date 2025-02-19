@@ -1,0 +1,38 @@
+<section class="home">
+    <div class="home-content">
+      <!-- Presentación -->
+      <h1 class="fade-in">¡Hola, soy <span class="highlight">{{ fullName }}</span>!</h1>
+      <h2 class="slide-in">{{ profession }}</h2>
+      <p class="fade-in">{{ bio }}</p>
+  
+      <!-- Tecnologías y herramientas -->
+      <div class="technologies">
+        <h3 class="slide-in">🔧 Tecnologías y herramientas:</h3>
+        <div class="tech-icons">
+          <div class="tech-item fade-in" *ngFor="let tech of technologies">
+            <i [class]="tech.icon"></i>
+            <span>{{ tech.name }}</span>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Lenguajes de programación -->
+      <div class="languages">
+        <h3 class="slide-in">💻 Lenguajes de programación y de marcado:</h3>
+        <div class="language-icons">
+          <div class="lang-item fade-in" *ngFor="let lang of languages">
+            <i [class]="lang.icon"></i>
+            <span>{{ lang.name }}</span>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Botones de navegación -->
+      <div class="buttons fade-in">
+        <a routerLink="/projects" class="btn">🚀 Ver mis proyectos</a>
+        <a routerLink="/contact" class="btn btn-secondary">📩 Contáctame</a>
+      </div>
+    </div>
+  </section>
+  
+  

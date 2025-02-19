@@ -1,0 +1,35 @@
+<section class="about">
+  <div class="about-content">
+    <h1>Sobre mí</h1>
+    <p>
+      Soy Julian Andrés Roldan Dussan, tengo 24 años, vivo en Colombia y soy
+      <span class="highlight">desarrollador Full Stack</span>. Me apasiona la
+      tecnología y el desarrollo de aplicaciones web que ofrezcan experiencias
+      excepcionales. También disfruto de los videojuegos, lo que me inspira a
+      crear soluciones digitales innovadoras. Mi objetivo es seguir creciendo
+      profesionalmente y contribuir a proyectos que impacten positivamente.
+    </p>
+
+    <!-- Línea de tiempo horizontal con mejor diseño -->
+    <div class="timeline">
+      <h2>Mi Trayectoria Académica y laboral</h2>
+      <div class="timeline-container">
+        <div class="timeline-track">
+          <div class="timeline-item" *ngFor="let study of studies">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="year">{{ study.year }}</span>
+              <h4>{{ study.title }}</h4>
+              <p>{{ study.institution }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <a routerLink="/projects" class="btn">Ver mis proyectos</a>
+      <a routerLink="/contact" class="btn btn-secondary">Contáctame</a>
+    </div>
+  </div>
+</section>
