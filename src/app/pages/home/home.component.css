@@ -1,99 +1,24 @@
+/* 🌟 Estilos Generales */
 .home {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     padding: 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #2b2b2bd6, #1e1e1eee);
+    color: white;
     margin-left: 250px; /* Ajuste para que no se superponga con el sidebar */
-    text-align: center;
-    background: linear-gradient(135deg, #2b2b2bd6, #1e1e1eee);
-    color: white;
-}
-
-.home-content {
-    max-width: 600px;
-}
-
-.home-content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.home-content h2 {
-    font-size: 1.8rem;
-    color: #f4a261;
-    margin-bottom: 20px;
-}
-
-.home-content p {
-    font-size: 1.2rem;
-    line-height: 1.5;
-    margin-bottom: 30px;
-}
-
-/* Botones */
-.buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.btn {
-    padding: 12px 20px;
-    font-size: 1rem;
-    text-decoration: none;
-    color: white;
-    background-color: #f4a261;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-.btn:hover {
-    background-color: #e76f51;
-}
-
-.btn-secondary {
-    background-color: #264653;
-}
-
-.btn-secondary:hover {
-    background-color: #2a9d8f;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .home {
-        margin-left: 80px;
-    }
-
-    .home-content h1 {
-        font-size: 2rem;
-    }
-
-    .home-content h2 {
-        font-size: 1.5rem;
-    }
-
-    .home-content p {
-        font-size: 1rem;
-    }
-}
-.home {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    padding: 20px;
-    text-align: center;
-    background: linear-gradient(135deg, #2b2b2bd6, #1e1e1eee);
-    color: white;
+    transition: margin-left 0.3s ease-in-out;
 }
 
 .home-content {
     max-width: 700px;
     animation: fadeInUp 1s ease-in-out;
+    padding: 20px;
 }
 
+/* ✅ Encabezados */
 h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
@@ -115,7 +40,7 @@ p {
     margin-bottom: 30px;
 }
 
-/* Estilos para tecnologías y lenguajes */
+/* 🎨 Estilos para Tecnologías y Lenguajes */
 .tech-icons, .language-icons {
     display: flex;
     justify-content: center;
@@ -143,11 +68,12 @@ p {
     transform: scale(1.1);
 }
 
-/* Botones */
+/* 🔘 Botones */
 .buttons {
     display: flex;
     justify-content: center;
     gap: 15px;
+    flex-wrap: wrap;
     margin-top: 20px;
 }
 
@@ -173,7 +99,105 @@ p {
     background-color: #2a9d8f;
 }
 
-/* Animaciones */
+/* 📱📏 Responsive Design */
+/* ✅ Para Tablets y pantallas medianas (máx. 1024px) */
+@media (max-width: 1024px) {
+    .home {
+        margin-left: 100px; /* Reducir margen para pantallas medianas */
+        padding: 20px;
+    }
+
+    .home-content {
+        max-width: 90%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .tech-icons, .language-icons {
+        gap: 10px;
+    }
+
+    .tech-item, .lang-item {
+        padding: 8px 12px;
+    }
+}
+
+/* ✅ Para Móviles (máx. 768px) */
+@media (max-width: 768px) {
+    .home {
+        margin-left: 0;
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .tech-icons, .language-icons {
+        gap: 8px;
+    }
+
+    .tech-item, .lang-item {
+        padding: 6px 10px;
+        font-size: 0.9rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+}
+
+/* ✅ Para pantallas muy pequeñas (máx. 480px) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 0.85rem;
+    }
+
+    .buttons {
+        width: 100%;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+    }
+}
+
+/* 🎬 Animaciones */
 @keyframes fadeInUp {
     from {
         opacity: 0;

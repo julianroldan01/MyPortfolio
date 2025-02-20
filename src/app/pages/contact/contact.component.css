@@ -1,3 +1,4 @@
+/* Estilos generales */
 .contact {
     display: flex;
     align-items: center;
@@ -12,8 +13,10 @@
 
 .contact-content {
     max-width: 500px;
+    width: 100%;
 }
 
+/* Títulos */
 .contact h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
@@ -39,6 +42,12 @@ input, textarea {
     font-size: 1rem;
 }
 
+textarea {
+    resize: none;
+    height: 120px;
+}
+
+/* Botón */
 button {
     padding: 12px;
     font-size: 1rem;
@@ -68,9 +77,33 @@ button:hover {
     color: #e76f51;
 }
 
-/* Responsive */
+/* --- RESPONSIVE DESIGN --- */
 @media (max-width: 768px) {
     .contact {
-        margin-left: 80px;
+        margin-left: 0; /* Se elimina el margen lateral para centrar */
+        padding: 40px 20px; /* Se ajusta el padding para mejor espaciado */
+        height: auto; /* Se cambia la altura a auto para mejor ajuste */
+    }
+
+    .contact-content {
+        max-width: 100%; /* Se ajusta el ancho al 100% */
+    }
+
+    .contact h1 {
+        font-size: 2rem;
+    }
+
+    .contact p {
+        font-size: 1rem;
+    }
+
+    input, textarea {
+        font-size: 1rem;
+        padding: 12px; /* Más cómodo para móviles */
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 12px;
     }
 }
