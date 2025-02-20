@@ -1,24 +1,29 @@
+/* Sección principal de proyectos */
 .projects {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
   text-align: center;
   padding: 50px 20px;
   background: linear-gradient(135deg, #2b2b2bd6, #1e1e1eee);
   color: white;
   width: 100%;
+  min-height: 100vh; /* Evita cortes en la pantalla */
 }
 
-/* Para pantallas grandes con sidebar */
-@media (min-width: 769px) {
+/* Espacio para el sidebar en pantallas grandes */
+@media (min-width: 1024px) {
   .projects {
-      margin-left: 250px; /* Deja espacio para el sidebar */
+    margin-left: 250px; /* Espacio para el sidebar */
   }
 }
 
+/* Contenedor de contenido */
 .projects-content {
   max-width: 900px;
   width: 100%;
+  margin: 0 auto;
 }
 
 .projects-content h1 {
@@ -31,14 +36,14 @@
   margin-bottom: 30px;
 }
 
-/* Estilos para la lista de proyectos */
+/* Lista de proyectos */
 .project-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
   justify-content: center;
-  margin-bottom: 30px;
   width: 100%;
+  margin-bottom: 30px;
 }
 
 /* Tarjetas de proyectos */
@@ -57,7 +62,7 @@
 
 .project-card img {
   width: 100%;
-  height: 160px;
+  height: 180px; /* Ajustado para mejor visibilidad */
   object-fit: cover;
   border-radius: 5px;
 }
@@ -76,13 +81,6 @@
   line-height: 1.5;
   color: #ccc;
   margin-bottom: 15px;
-}
-
-/* Botón dentro de la tarjeta */
-.project-info .btn {
-  display: block; 
-  margin-top: 10px;
-  text-align: center;
 }
 
 /* Botones */
@@ -110,34 +108,48 @@
   background-color: #2a9d8f;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* Ajuste del botón en la tarjeta */
+.project-info .btn {
+  display: block; 
+  margin-top: 10px; 
+}
+
+/* 🔹 Estilos Responsive para móviles */
+@media (max-width: 1024px) {
   .projects {
-      margin-left: 0; /* Evita desbordes en móviles */
-      padding: 30px 15px;
+    margin-left: 0; /* Elimina margen del sidebar en móviles */
+    padding: 40px 15px;
+  }
+
+  .projects-content {
+    max-width: 100%;
   }
 
   .projects-content h1 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   .projects-content p {
-      font-size: 1rem;
+    font-size: 1rem;
   }
 
   .project-list {
-      grid-template-columns: 1fr; /* 1 columna en móviles */
+    grid-template-columns: 1fr; /* Una sola columna en móviles */
   }
 
   .project-card {
-      padding: 15px;
+    padding: 15px;
+  }
+
+  .project-card img {
+    height: 150px; /* Ajuste para pantallas pequeñas */
   }
 
   .project-info h3 {
-      font-size: 1.3rem;
+    font-size: 1.3rem;
   }
 
   .project-info p {
-      font-size: 0.95rem;
+    font-size: 0.95rem;
   }
 }
