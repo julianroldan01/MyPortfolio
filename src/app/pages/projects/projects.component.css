@@ -10,12 +10,14 @@
   color: white;
   width: 100%;
   min-height: 100vh; /* Evita cortes en la pantalla */
+  box-sizing: border-box; /* Evita desbordamientos */
 }
 
-/* Espacio para el sidebar en pantallas grandes */
+/* Ajuste para pantallas grandes con sidebar */
 @media (min-width: 1024px) {
   .projects {
     margin-left: 250px; /* Espacio para el sidebar */
+    width: calc(100% - 250px); /* Evita que el background se extienda */
   }
 }
 
@@ -62,7 +64,7 @@
 
 .project-card img {
   width: 100%;
-  height: 180px; /* Ajustado para mejor visibilidad */
+  height: 180px;
   object-fit: cover;
   border-radius: 5px;
 }
@@ -117,7 +119,8 @@
 /* 🔹 Estilos Responsive para móviles */
 @media (max-width: 1024px) {
   .projects {
-    margin-left: 0; /* Elimina margen del sidebar en móviles */
+    margin-left: 0;
+    width: 100%; /* Asegura que no se desborde */
     padding: 40px 15px;
   }
 
@@ -142,7 +145,7 @@
   }
 
   .project-card img {
-    height: 150px; /* Ajuste para pantallas pequeñas */
+    height: 150px;
   }
 
   .project-info h3 {
